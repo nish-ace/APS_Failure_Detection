@@ -1,0 +1,6 @@
+2022-08-15/02:06:59		aps_failure_training_set_0.csv: File Transformed successfully!!
+2022-08-15/02:07:00		aps_failure_training_set_1.csv: File Transformed successfully!!
+2022-08-15/02:07:01		aps_failure_training_set_2.csv: File Transformed successfully!!
+2022-08-15/02:07:02		aps_failure_training_set_3.csv: File Transformed successfully!!
+2022-08-15/02:07:03		aps_failure_training_set_4.csv: File Transformed successfully!!
+2022-08-15/02:07:04		aps_failure_training_set_5.csv: File Transformed successfully!!

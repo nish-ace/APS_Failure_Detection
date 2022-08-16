@@ -1,0 +1,4 @@
+2022-08-15/02:07:04		Opened Training_DB successfully.
+2022-08-15/02:07:05		Closed Training_DB database successfully.
+2022-08-15/02:07:05		Opened Training_DB successfully.
+2022-08-15/02:16:47		Opened Training_DB successfully.
