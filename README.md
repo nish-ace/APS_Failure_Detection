@@ -11,6 +11,7 @@
     For a given problem, the cost of failing to detect the faulty part has 50 times the cost of doing pointless check on acceptable parts. The total  maintenance cost was calculated as sum of total cost required for misclassified trucks.
 
     Dataset link: https://archive.ics.uci.edu/ml/datasets/APS+Failure+at+Scania+Trucks
+    
 
 ### Dataset Description
 
@@ -46,3 +47,22 @@
     KMeans algorithm is used to create clusters in the preprocessed data. The optimum number of clusters 
     is selected
      
+### Evaluation Metric
+    
+    Cost-metric of miss-classification:
+
+     Predicted class |      True class       |
+                     |    pos    |    neg    |
+     -----------------------------------------
+      pos            |     -     |  Cost_1   |
+     -----------------------------------------
+      neg            |  Cost_2   |     -     |
+     -----------------------------------------
+     Cost_1 = 10 and cost_2 = 500
+
+     The total cost of a prediction model the sum of "Cost_1" multiplied by the number of Instances with type 1 failure and "Cost_2" with the number of instances with type 2 failure, resulting in a "Total_cost".
+
+     Cost_1 refers to the cost that an unnessecary check needs to be done by an mechanic at a workshop.
+     Cost_2 refers to the cost of missing a faulty truck, which may cause a breakdown.
+
+     Total_cost = Cost_1*No_Instances + Cost_2*No_Instances.
