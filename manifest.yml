@@ -1,0 +1,10 @@
+
+---
+applications:
+- name: APSFailure
+  memory: 4GB
+  disk_quota: 2GB
+  random-route: true
+  parameters:
+    memory: 4GB
+    buildpack: 'python_buildpack'
