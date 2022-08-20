@@ -39,9 +39,12 @@
 
     Data Export from DB: 
     The data in a stored database is exported as a .csv file to be used for model training.
+    
+    Log Transform:
+    Due to skewness in the data, log transform is used
  
     Data Preprocessing: 
-    Check for null values in the columns. If present, impute the null values using the KNN imputer.
+    Check for null values in the columns. If present, impute the null values using the median.
     
     Clustering: 
     KMeans algorithm is used to create clusters in the preprocessed data. The optimum number of clusters 
