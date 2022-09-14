@@ -61,7 +61,7 @@ class Predict_Model:
             X['clusters']= clusters
             X['label'] = y
             data = pd.DataFrame()
-
+            sum = 0
             cluster=X['clusters'].unique()
             for i in cluster:
                 cluster_table = X[X['clusters']==i]
@@ -70,14 +70,13 @@ class Predict_Model:
                 model = file_loader.load_model(model_name)
                 tn, fp, fn, tp = confusion_matrix(y_true=y_true, y_pred=model.predict(cluster_data)).ravel()
                 result = {f'cost{i}':fn*500 + fp*10}
-                result = pd.DataFrame([result])
-                data = pd.concat([data,result], axis = 0)
-                path="prediction_output_file/Cost.csv"
-                data.to_csv(path,header=True,mode='a+') #appends result to prediction file
+                sum+= fn*500 + fp*10
+                
             self.log_writer.log(self.file_object,'Successful end of Prediction.')
+            result = pd.DataFrame({'Sum':sum})
 
         except Exception as e:
             self.log_writer.log(self.file_object, f'Exception occurred in predicting model. Exception: {e}')
             self.log_writer.log(self.file_object, f'Unsuccessful end of prediction.')
             raise Exception()
-        return path, data.head().to_json(orient="records")
+        return sum, result.head().to_json(orient="records")

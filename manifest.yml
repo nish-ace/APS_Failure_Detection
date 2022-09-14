@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ---
 applications:
@@ -7,4 +8,15 @@ applications:
   random-route: true
   parameters:
     memory: 4GB
+=======
+
+---
+applications:
+- name: APSFailure
+  memory: 4GB
+  disk_quota: 2GB
+  random-route: true
+  parameters:
+    memory: 4GB
+>>>>>>> 1c11f4609891e23669ec21503b057085986fe9f7
     buildpack: 'python_buildpack'

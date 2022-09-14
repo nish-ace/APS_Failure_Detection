@@ -39,8 +39,8 @@ def predictRouteClient():
             pred = Predict_Model()  # object initialization
 
             # predicting for dataset present in database
-            path, json_predictions = pred.model_prediction()
-            return Response(f"Predictions are:\n {str(json.loads(json_predictions))}")
+            json_predictions = pred.model_prediction()
+            return Response(f"Cost is: \n {str(json.loads(json_predictions))}")
 
         else:
             print('Nothing Matched')

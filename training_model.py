@@ -4,6 +4,7 @@ from data_ingestion import load_train_data
 from data_preprocessing import preprocess, clustering
 from best_model_fit import tuning
 from file_operations import file_methods
+from imblearn.over_sampling import SMOTE
 
 
 class Train_Model:
@@ -56,23 +57,27 @@ class Train_Model:
             #drop the columns obtained above
             # X = preprocessor.drop_columns(X,cols_to_drop)
 
+            '''Oversampling the data to avoid the imabalance class problem'''
+            smote = SMOTE()
+            X_, y_ = smote.fit_resample(X, y)
+
             '''Clustering Approach'''
 
             kmeans = clustering.KMeansClustering(self.file_object, self.log_writer)
-            cluster_count = kmeans.elbow_plot(X)
+            cluster_count = kmeans.elbow_plot(X_)
             
             #divide data into clusters
-            X = kmeans.create_clusters(X,cluster_count)
+            X_ = kmeans.create_clusters(X_,cluster_count)
 
             #create a new column in the dataset consisting of the corresponding cluster assignments.
-            X['labels']=y
+            X_['labels']=y_
 
-            cluster_list = X['cluster'].unique()
+            cluster_list = X_['cluster'].unique()
 
             '''parsing all the clusters and looking for the best ML algorithm to fit on individual cluster'''
 
             for i in cluster_list:
-                cluster_data = X[X['cluster'] == i]
+                cluster_data = X_[X_['cluster'] == i]
                 cluster_features=cluster_data.drop(['labels','cluster'],axis=1)
                 cluster_label= cluster_data['labels']
 
