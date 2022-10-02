@@ -164,7 +164,7 @@ class Model_Finder:
             return np.array(ls)
 
         try:
-            #XGBoost 
+            #LGBM
             self.lgbm = self.fit_LGBM(train_X, train_y)
             predicted_proba_lgbm = self.lgbm.predict_proba(test_X)
             cost_lgbm = {}
