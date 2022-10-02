@@ -1,9 +1,10 @@
 import pandas as pd
+import numpy as np
 from application_logging import logger
 from data_preprocessing import preprocess
 from data_ingestion import load_train_data
 from file_operations import file_methods
-from data_ingestion.load_prediction_data import Get_Data
+from data_ingestion.load_prediction_data import Get_Test_Data
 from sklearn.metrics import confusion_matrix
 
 class Predict_Model:
@@ -17,15 +18,14 @@ class Predict_Model:
     def __init__(self):
         self.log_writer = logger.App_Logger()
         self.file_object = open('prediction_logs/ModelPredictionLog.txt', 'a+')
-        self.getData = Get_Data(self.file_object, self.log_writer)
+        self.getData = Get_Test_Data(self.file_object, self.log_writer)
 
     def model_prediction(self):
         self.log_writer.log(self.file_object, 'Start of Prediction.')
 
         try:
             #get data from source
-            getData = load_train_data.Get_Data(self.file_object, self.log_writer)
-            data = getData.get_data()
+            data = self.getData.get_data()
 
             #preprocessing the data
             preprocessor = preprocess.Preprocessing(self.file_object, self.log_writer)
@@ -46,7 +46,7 @@ class Predict_Model:
             #split into X, y_true columns and
             X,y = preprocessor.seperate_label_features(data, 'class')
 
-            X = preprocessor.log_transform(X) #log transforming the data, due to heavy skewness present
+            # X = preprocessor.log_transform(X) #log transforming the data, due to heavy skewness present
 
             #check for null values in feature columns, if present impute the missing values
             if(preprocessor.null_present(X)):
@@ -56,24 +56,39 @@ class Predict_Model:
             file_loader=file_methods.File_Operations(self.file_object,self.log_writer)
             kmeans=file_loader.load_model('KMeans')
 
+            def convert(arr):
+                ls = []
+                for _ in arr:
+                    if _ == False:
+                        ls.append(-1)
+                    else:
+                        ls.append(1)
+                return np.array(ls)
+
             #clustering the data
-            clusters=kmeans.predict(X)#drops the first column for cluster prediction
+            clusters=kmeans.predict(X) #drops the first column for cluster prediction
             X['clusters']= clusters
             X['label'] = y
             data = pd.DataFrame()
             sum = 0
             cluster=X['clusters'].unique()
+            # print(cluster)
+            df = pd.read_csv(r'thresholds\threshold.csv')
             for i in cluster:
                 cluster_table = X[X['clusters']==i]
                 cluster_data, y_true = cluster_table.drop(['clusters','label'],axis=1),cluster_table['label']
                 model_name = file_loader.correct_model_file(i)
                 model = file_loader.load_model(model_name)
-                tn, fp, fn, tp = confusion_matrix(y_true=y_true, y_pred=model.predict(cluster_data)).ravel()
-                result = {f'cost{i}':fn*500 + fp*10}
+                threshold = df.iloc[0][0]
+                predicted_proba = model.predict_proba(cluster_data)
+                y_pred = convert(predicted_proba[:,1] >= threshold)
+                tn, fp, fn, tp = confusion_matrix(y_true=y_true, y_pred=y_pred).ravel()
                 sum+= fn*500 + fp*10
+                print(tn, fp, fn, tp, '\n', sum)
                 
             self.log_writer.log(self.file_object,'Successful end of Prediction.')
-            result = pd.DataFrame({'Sum':sum})
+            result = pd.DataFrame({'Cost':[sum]})
+            print(sum)
 
         except Exception as e:
             self.log_writer.log(self.file_object, f'Exception occurred in predicting model. Exception: {e}')

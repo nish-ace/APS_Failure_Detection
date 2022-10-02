@@ -1,26 +1,28 @@
-2022-08-15/14:33:13		Start of Prediction.
-2022-08-15/14:33:13		Entered the get_data method of the Get_Data class
-2022-08-15/14:33:15		Data load successful. Exited the get_data method of Get_Data class
-2022-08-15/14:33:15		Entered the drop_columns method of Preprocessing class.
-2022-08-15/14:33:15		Idx Features dropped successfully. Exited the drop_columns method of Preprocessing class.
-2022-08-15/14:33:15		Entered null_present method of Preprocessing class.
-2022-08-15/14:33:15		Finding missing values successful. Data written to null_data file. Exited the null_present method of Preprocessing class.
-2022-08-15/14:33:15		Entered the impute_missing_values method of the Preprocessor class
-2022-08-15/14:33:18		Missing values imputation successful. Exited the impute_missing_values method of Preprocessing class.
-2022-08-15/14:33:18		Entered the seperate_label_features method of Preprocessing class.
-2022-08-15/14:33:18		Features-Label seperation successful. Exited the seperate_label_features method of Preprocessing class.
-2022-08-15/14:33:18		Entered log_transform method of Preprocessing class.
-2022-08-15/14:33:19		Log transformation successful. Exited the log_transformation method of Preprocessing class.
-2022-08-15/14:33:19		Entered null_present method of Preprocessing class.
-2022-08-15/14:33:19		Finding missing values successful. Data written to null_data file. Exited the null_present method of Preprocessing class.
-2022-08-15/14:33:19		Entered the the load_model method of File_Operations class.
-2022-08-15/14:33:19		Model File KMeans loaded. Exited the load_model method of File_Operations class.
-2022-08-15/14:33:19		Entered the correct_model_file method of File_Operations class.
-2022-08-15/14:33:19		Finding correct model file successful. Exited the find_correct_model_file method of the Model_Finder class.
-2022-08-15/14:33:19		Entered the the load_model method of File_Operations class.
-2022-08-15/14:33:19		Model File GaussianNB0 loaded. Exited the load_model method of File_Operations class.
-2022-08-15/14:33:19		Entered the correct_model_file method of File_Operations class.
-2022-08-15/14:33:19		Finding correct model file successful. Exited the find_correct_model_file method of the Model_Finder class.
-2022-08-15/14:33:19		Entered the the load_model method of File_Operations class.
-2022-08-15/14:33:19		Model File GaussianNB1 loaded. Exited the load_model method of File_Operations class.
-2022-08-15/14:33:20		Successful end of Prediction.
+2022-10-02/02:20:46		Start of Prediction.
+2022-10-02/02:20:46		Entered the get_data method of the Get_Data class
+2022-10-02/02:20:47		Data load successful. Exited the get_data method of Get_Data class
+2022-10-02/02:20:47		Entered the drop_columns method of Preprocessing class.
+2022-10-02/02:20:47		Idx Features dropped successfully. Exited the drop_columns method of Preprocessing class.
+2022-10-02/02:20:47		Entered null_present method of Preprocessing class.
+2022-10-02/02:20:47		Finding missing values successful. Data written to null_data file. Exited the null_present method of Preprocessing class.
+2022-10-02/02:20:47		Entered the impute_missing_values method of the Preprocessor class
+2022-10-02/02:20:48		Missing values imputation successful. Exited the impute_missing_values method of Preprocessing class.
+2022-10-02/02:20:48		Entered the seperate_label_features method of Preprocessing class.
+2022-10-02/02:20:48		Features-Label seperation successful. Exited the seperate_label_features method of Preprocessing class.
+2022-10-02/02:20:48		Entered null_present method of Preprocessing class.
+2022-10-02/02:20:48		Finding missing values successful. Data written to null_data file. Exited the null_present method of Preprocessing class.
+2022-10-02/02:20:48		Entered the the load_model method of File_Operations class.
+2022-10-02/02:20:48		Model File KMeans loaded. Exited the load_model method of File_Operations class.
+2022-10-02/02:20:48		Entered the correct_model_file method of File_Operations class.
+2022-10-02/02:20:48		Finding correct model file successful. Exited the find_correct_model_file method of the Model_Finder class.
+2022-10-02/02:20:48		Entered the the load_model method of File_Operations class.
+2022-10-02/02:20:48		Model File LGBM0 loaded. Exited the load_model method of File_Operations class.
+2022-10-02/02:20:51		Entered the correct_model_file method of File_Operations class.
+2022-10-02/02:20:51		Finding correct model file successful. Exited the find_correct_model_file method of the Model_Finder class.
+2022-10-02/02:20:51		Entered the the load_model method of File_Operations class.
+2022-10-02/02:20:51		Model File LGBM1 loaded. Exited the load_model method of File_Operations class.
+2022-10-02/02:20:52		Entered the correct_model_file method of File_Operations class.
+2022-10-02/02:20:52		Finding correct model file successful. Exited the find_correct_model_file method of the Model_Finder class.
+2022-10-02/02:20:52		Entered the the load_model method of File_Operations class.
+2022-10-02/02:20:52		Model File LGBM2 loaded. Exited the load_model method of File_Operations class.
+2022-10-02/02:20:52		Successful end of Prediction.

@@ -1,4 +1,4 @@
-2022-08-15/14:30:20		Opened Testing_DB successfully.
-2022-08-15/14:30:22		Closed Testing_DB database successfully.
-2022-08-15/14:30:22		Opened Testing_DB successfully.
-2022-08-15/14:33:11		Opened Testing_DB successfully.
+2022-10-02/02:17:46		Opened Testing_DB successfully.
+2022-10-02/02:17:48		Closed Testing_DB database successfully.
+2022-10-02/02:17:48		Opened Testing_DB successfully.
+2022-10-02/02:20:37		Opened Testing_DB successfully.

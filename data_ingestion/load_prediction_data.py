@@ -1,6 +1,6 @@
 import pandas as pd
 
-class Get_Data:
+class Get_Test_Data:
     
     '''
     Used to load data from source file for prediction

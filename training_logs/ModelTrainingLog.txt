@@ -1,48 +1,66 @@
-2022-08-15/02:16:50		Start of Training.
-2022-08-15/02:16:50		Entered the get_data method of the Get_Data class
-2022-08-15/02:16:51		Data load successful. Exited the get_data method of Get_Data class
-2022-08-15/02:16:51		Entered the drop_columns method of Preprocessing class.
-2022-08-15/02:16:51		Idx Features dropped successfully. Exited the drop_columns method of Preprocessing class.
-2022-08-15/02:16:51		Entered the seperate_label_features method of Preprocessing class.
-2022-08-15/02:16:51		Features-Label seperation successful. Exited the seperate_label_features method of Preprocessing class.
-2022-08-15/02:16:51		Entered outlier_removal method of Preprocessing class.
-2022-08-15/02:16:52		Outlier removal successful. Exited outlier_removal method of Preprocessing class.
-2022-08-15/02:16:52		Entered log_transform method of Preprocessing class.
-2022-08-15/02:16:52		Log transformation successful. Exited the log_transformation method of Preprocessing class.
-2022-08-15/02:16:52		Entered null_present method of Preprocessing class.
-2022-08-15/02:16:52		Finding missing values successful. Data written to null_data file. Exited the null_present method of Preprocessing class.
-2022-08-15/02:16:52		Entered the impute_missing_values method of the Preprocessor class
-2022-08-15/02:16:53		Missing values imputation successful. Exited the impute_missing_values method of Preprocessing class.
-2022-08-15/02:16:53		Entered the elbow_plot method of KMeansClustering class.
-2022-08-15/02:17:22		The optimum number of clusters is: 2. Exited the elbow_plot method of the KMeansClustering class.
-2022-08-15/02:17:22		Entered the create_clusters method of KMeansClustering class.
-2022-08-15/02:17:23		Entered the save_model method of File_Operations class.
-2022-08-15/02:17:23		Model file KMeans saved. Exited the save_model method of File_Operations class.
-2022-08-15/02:17:23		Succesfully created 2 clusters. Exited the create_clusters method of the KMeansClustering class.
-2022-08-15/02:17:23		Entered the get_best_model method of Model_Finder class.
-2022-08-15/02:17:23		Entered the get_best_params_XGB method of Model_Finder class.
-2022-08-15/02:18:41		XGBoost best parameters: {'colsample_bytree': 1, 'eta': 0.05, 'reg_lambda': 1, 'scale_pos_weight': 0.01694915254237288, 'subsample': 0.6}. Exited the get_best_params_XGB method of Model_Finder class.
-2022-08-15/02:18:41		Cost for XGBoost: $153500
-2022-08-15/02:18:41		Entered the get_best_params_RF method of Model_Finder class.
-2022-08-15/02:25:54		RandomForest best parameters: {'ccp_alpha': 0.01, 'criterion': 'gini', 'max_depth': 13, 'max_leaf_nodes': 300, 'min_samples_split': 12, 'n_estimators': 800}. Exited the get_best_params_RF method of Model_Finder class.
-2022-08-15/02:25:55		Cost for RandomForest: $153500
-2022-08-15/02:25:55		Entered the get_best_params_NB method of Model_Finder class.
-2022-08-15/02:26:01		GaussianNB best parameters: {'var_smoothing': 1.0}. Exited the get_best_params_NB method of Model_Finder class.
-2022-08-15/02:26:01		Cost for GaussianNB: $90360
-2022-08-15/02:26:01		Model selection successful. Exited the get_best_model method of Model_Finder class.
-2022-08-15/02:26:01		Entered the save_model method of File_Operations class.
-2022-08-15/02:26:01		Model file GaussianNB0 saved. Exited the save_model method of File_Operations class.
-2022-08-15/02:26:01		Entered the get_best_model method of Model_Finder class.
-2022-08-15/02:26:01		Entered the get_best_params_XGB method of Model_Finder class.
-2022-08-15/02:26:32		XGBoost best parameters: {'colsample_bytree': 1, 'eta': 0.05, 'reg_lambda': 1, 'scale_pos_weight': 0.01694915254237288, 'subsample': 0.6}. Exited the get_best_params_XGB method of Model_Finder class.
-2022-08-15/02:26:33		Cost for XGBoost: $10000
-2022-08-15/02:26:33		Entered the get_best_params_RF method of Model_Finder class.
-2022-08-15/02:28:40		RandomForest best parameters: {'ccp_alpha': 0.01, 'criterion': 'gini', 'max_depth': 13, 'max_leaf_nodes': 300, 'min_samples_split': 12, 'n_estimators': 800}. Exited the get_best_params_RF method of Model_Finder class.
-2022-08-15/02:28:40		Cost for RandomForest: $10000
-2022-08-15/02:28:40		Entered the get_best_params_NB method of Model_Finder class.
-2022-08-15/02:28:44		GaussianNB best parameters: {'var_smoothing': 1e-05}. Exited the get_best_params_NB method of Model_Finder class.
-2022-08-15/02:28:44		Cost for GaussianNB: $4330
-2022-08-15/02:28:44		Model selection successful. Exited the get_best_model method of Model_Finder class.
-2022-08-15/02:28:44		Entered the save_model method of File_Operations class.
-2022-08-15/02:28:44		Model file GaussianNB1 saved. Exited the save_model method of File_Operations class.
-2022-08-15/02:28:44		Successful end of training.
+2022-10-01/15:58:51		Start of Training.
+2022-10-01/15:58:51		Entered the get_data method of the Get_Data class
+2022-10-01/15:58:52		Data load successful. Exited the get_data method of Get_Data class
+2022-10-01/15:58:52		Entered the drop_columns method of Preprocessing class.
+2022-10-01/15:58:52		Idx Features dropped successfully. Exited the drop_columns method of Preprocessing class.
+2022-10-01/15:58:52		Entered the seperate_label_features method of Preprocessing class.
+2022-10-01/15:58:52		Features-Label seperation successful. Exited the seperate_label_features method of Preprocessing class.
+2022-10-01/15:58:52		Entered null_present method of Preprocessing class.
+2022-10-01/15:58:52		Finding missing values successful. Data written to null_data file. Exited the null_present method of Preprocessing class.
+2022-10-01/15:58:52		Entered the impute_missing_values method of the Preprocessor class
+2022-10-01/15:58:54		Missing values imputation successful. Exited the impute_missing_values method of Preprocessing class.
+2022-10-01/15:58:54		Entered the elbow_plot method of KMeansClustering class.
+2022-10-01/15:59:26		The optimum number of clusters is: 3. Exited the elbow_plot method of the KMeansClustering class.
+2022-10-01/15:59:26		Entered the create_clusters method of KMeansClustering class.
+2022-10-01/15:59:28		Entered the save_model method of File_Operations class.
+2022-10-01/15:59:28		Model file KMeans saved. Exited the save_model method of File_Operations class.
+2022-10-01/15:59:28		Succesfully created 3 clusters. Exited the create_clusters method of the KMeansClustering class.
+2022-10-01/15:59:28		Entered the get_best_model method of Model_Finder class.
+2022-10-01/15:59:28		Entered the fit_LGBM method of Model_Finder class.
+2022-10-01/15:59:40		LGBM best parameters: {'reg_lambda': 1, 'subsample': 0.6, 'colsample_bytree': 1, 'n_estimators': 1200, 'num_leaves': 50}. Exited the fit_XGB method of Model_Finder class.
+2022-10-01/16:00:01		Threshold, Cost for LGBM: 0.48173602196722437, $0
+2022-10-01/16:00:01		Entered the fit_RF method of Model_Finder class.
+2022-10-01/16:01:09		RandomForest best parameters: {'n_estimators': 800, 'max_depth': 13, 'min_samples_split': 12, 'max_leaf_nodes': 300, 'ccp_alpha': 0.01, 'criterion': 'gini'}. Exited the get_best_params_RF method of Model_Finder class.
+2022-10-01/16:02:09		Threshold, Cost for RandomForest: 0.020025281632727047, $11010
+2022-10-01/16:02:09		Entered the get_best_params_NB method of Model_Finder class.
+2022-10-01/16:02:09		GaussianNB best parameters: {'var_smoothing': 1.0}. Exited the fit_NB method of Model_Finder class.
+2022-10-01/16:03:07		Threshold, Cost for GaussianNB: 0.057785540418072295 $21250
+2022-10-01/16:03:07		Entered the fit_mlp method of Model_Finder class.
+2022-10-01/16:09:15		MLP best parameters: {'hidden_layer_sizes': 1000, 'activation': 'relu', 'learning_rate_init': 0.001, 'max_iter': 500, 'n_iter_no_change': 25, 'verbose': False}. Exited the fit_MLP method of Model_Finder class.
+2022-10-01/16:10:16		Threshold, Cost for MLP: 0.29299548996099584 $17740
+2022-10-01/16:10:16		Model selection successful. Exited the get_best_model method of Model_Finder class.
+2022-10-01/16:10:16		Entered the save_model method of File_Operations class.
+2022-10-01/16:10:16		Model file LGBM1 saved. Exited the save_model method of File_Operations class.
+2022-10-01/16:10:17		Entered the get_best_model method of Model_Finder class.
+2022-10-01/16:10:17		Entered the fit_LGBM method of Model_Finder class.
+2022-10-01/16:13:24		LGBM best parameters: {'reg_lambda': 1, 'subsample': 0.6, 'colsample_bytree': 1, 'n_estimators': 1200, 'num_leaves': 50}. Exited the fit_XGB method of Model_Finder class.
+2022-10-01/17:46:27		Threshold, Cost for LGBM: 0.0004679755202909843, $3850
+2022-10-01/17:46:27		Entered the fit_RF method of Model_Finder class.
+2022-10-01/18:41:27		RandomForest best parameters: {'n_estimators': 800, 'max_depth': 13, 'min_samples_split': 12, 'max_leaf_nodes': 300, 'ccp_alpha': 0.01, 'criterion': 'gini'}. Exited the get_best_params_RF method of Model_Finder class.
+2022-10-01/20:05:49		Threshold, Cost for RandomForest: 0.01728010838105876, $65620
+2022-10-01/20:05:49		Entered the get_best_params_NB method of Model_Finder class.
+2022-10-01/20:05:50		GaussianNB best parameters: {'var_smoothing': 1.0}. Exited the fit_NB method of Model_Finder class.
+2022-10-01/20:41:07		Threshold, Cost for GaussianNB: 0.10855690194230412 $115780
+2022-10-01/20:41:07		Entered the fit_mlp method of Model_Finder class.
+2022-10-01/20:57:59		MLP best parameters: {'hidden_layer_sizes': 1000, 'activation': 'relu', 'learning_rate_init': 0.001, 'max_iter': 500, 'n_iter_no_change': 25, 'verbose': False}. Exited the fit_MLP method of Model_Finder class.
+2022-10-01/21:32:47		Threshold, Cost for MLP: 0.44166410997494854 $79270
+2022-10-01/21:32:47		Model selection successful. Exited the get_best_model method of Model_Finder class.
+2022-10-01/21:32:47		Entered the save_model method of File_Operations class.
+2022-10-01/21:32:48		Model file LGBM0 saved. Exited the save_model method of File_Operations class.
+2022-10-01/21:32:48		Entered the get_best_model method of Model_Finder class.
+2022-10-01/21:32:48		Entered the fit_LGBM method of Model_Finder class.
+2022-10-01/21:32:50		LGBM best parameters: {'reg_lambda': 1, 'subsample': 0.6, 'colsample_bytree': 1, 'n_estimators': 1200, 'num_leaves': 50}. Exited the fit_XGB method of Model_Finder class.
+2022-10-01/21:32:51		Threshold, Cost for LGBM: 0.9869832264291386, $10
+2022-10-01/21:32:51		Entered the fit_RF method of Model_Finder class.
+2022-10-01/21:33:01		RandomForest best parameters: {'n_estimators': 800, 'max_depth': 13, 'min_samples_split': 12, 'max_leaf_nodes': 300, 'ccp_alpha': 0.01, 'criterion': 'gini'}. Exited the get_best_params_RF method of Model_Finder class.
+2022-10-01/21:33:02		Threshold, Cost for RandomForest: 0.29417087467565034, $60
+2022-10-01/21:33:02		Entered the get_best_params_NB method of Model_Finder class.
+2022-10-01/21:33:02		GaussianNB best parameters: {'var_smoothing': 1.0}. Exited the fit_NB method of Model_Finder class.
+2022-10-01/21:33:03		Threshold, Cost for GaussianNB: 0.8499593477436699 $70
+2022-10-01/21:33:03		Entered the fit_mlp method of Model_Finder class.
+2022-10-01/21:33:14		MLP best parameters: {'hidden_layer_sizes': 1000, 'activation': 'relu', 'learning_rate_init': 0.001, 'max_iter': 500, 'n_iter_no_change': 25, 'verbose': False}. Exited the fit_MLP method of Model_Finder class.
+2022-10-01/21:33:15		Threshold, Cost for MLP: 0.8980694496110678 $80
+2022-10-01/21:33:15		Model selection successful. Exited the get_best_model method of Model_Finder class.
+2022-10-01/21:33:15		Entered the save_model method of File_Operations class.
+2022-10-01/21:33:15		Model file LGBM2 saved. Exited the save_model method of File_Operations class.
+2022-10-01/21:33:15		Successful end of training.

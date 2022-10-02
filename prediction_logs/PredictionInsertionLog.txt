@@ -1,8 +1,8 @@
-2022-08-15/14:30:16		Starting Data Transforamtion.
-2022-08-15/14:30:20		Data Transforamtion completed.
-2022-08-15/14:30:20		Creating Testing_DB tables.
-2022-08-15/14:30:22		DataBase table created successfully.
-2022-08-15/14:30:22		Insertion of data into tables started.
-2022-08-15/14:33:11		Insertion of data into tables completed.
-2022-08-15/14:33:11		Exporting data to CSV.
-2022-08-15/14:33:13		Export to CSV completed.
+2022-10-02/02:17:42		Starting Data Transforamtion.
+2022-10-02/02:17:46		Data Transforamtion completed.
+2022-10-02/02:17:46		Creating Testing_DB tables.
+2022-10-02/02:17:48		DataBase table created successfully.
+2022-10-02/02:17:48		Insertion of data into tables started.
+2022-10-02/02:20:37		Insertion of data into tables completed.
+2022-10-02/02:20:37		Exporting data to CSV.
+2022-10-02/02:20:39		Export to CSV completed.

@@ -141,7 +141,7 @@ class Preprocessing:
     def impute_missing_values(self, data):
 
         '''
-        Replaces all the missing values in the Dataframe using KNN Imputer
+        Replaces all the missing values in the Dataframe using Simple Imputer
         Returns: Pandas Dataframe
         '''
 
