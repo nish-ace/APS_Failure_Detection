@@ -1,4 +1,4 @@
-<h2> Wafer Fault Detection </h2>
+<h2> Air Pressure System Failure Detection </h2>
 
 Dataset link: https://archive.ics.uci.edu/ml/datasets/APS+Failure+at+Scania+Trucks#
 
